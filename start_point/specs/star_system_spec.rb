@@ -8,7 +8,6 @@ require_relative('../star_system')
 class TestStarSystem < Minitest::Test
 
   def setup
-    skip
     @earth = Planet.new("Earth", 12756, 149.6, 1)
     @jupiter = Planet.new("Jupiter", 142796, 778.3, 67)
     @mars = Planet.new("Mars", 6787, 227.9, 2)
@@ -58,7 +57,7 @@ class TestStarSystem < Minitest::Test
     assert_equal(5, result)
   end
 
-  # EXTENSIONS - MAY REQUIRE LOOKING UP THE DOCS
+  # # EXTENSIONS - MAY REQUIRE LOOKING UP THE DOCS
 
   def test_get_largest_planet
     result = @solar_system.get_largest_planet
