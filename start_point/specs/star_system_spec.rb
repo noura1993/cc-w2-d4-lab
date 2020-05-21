@@ -24,23 +24,19 @@ class TestStarSystem < Minitest::Test
   end
 
   def test_has_name
-    skip
     assert_equal("Solar System", @solar_system.name)
   end
 
   def test_has_planets
-    skip
     assert_equal(9, @solar_system.planets.count)
   end
   
   def test_planet_names
-    skip
     expected_names = ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Pluto", "Saturn", "Uranus", "Venus"]
     assert_equal(expected_names, @solar_system.planet_names)
   end
   
   def test_get_planet_by_name
-    skip
     result = @solar_system.get_planet_by_name("Mars")
     assert_equal(@mars, result)
   end
