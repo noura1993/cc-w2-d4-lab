@@ -29,5 +29,10 @@ class StarSystem
     def get_largest_planet()
       return @planets.find{ |planet| planet.diameter.max}
     end
+
+    def get_smallest_planet()
+      return @planets.find{ |planet| planet.diameter.min}
+    end
+    
     
 end
