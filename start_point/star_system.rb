@@ -25,5 +25,9 @@ class StarSystem
     def get_number_of_planets_closer_than(number)
       return @planets.select{ |planet| planet.distance_from_sun < number}.length
     end
+
+    def get_largest_planet()
+      return @planets.find{ |planet| planet.diameter.max}
+    end
     
 end
