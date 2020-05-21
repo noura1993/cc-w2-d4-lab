@@ -38,5 +38,12 @@ class StarSystem
       return @planets.reduce(0) { |running_total, planet| running_total + planet.number_of_moons}
     end
     
-    
+    def get_planet_names_sorted_by_increasing_distance_from_sun()
+      return @planets.sort{ |planet1, planet2| planet1.distance_from_sun <=  planet2.distance_from_sun}
+    end
+
+    def get_planet_names_sorted_by_size_decreasing()
+      return @planets.sort{ |planet1, planet2| planet1.diameter >=  planet2.diameter}
+    end
+
 end
