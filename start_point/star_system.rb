@@ -33,6 +33,10 @@ class StarSystem
     def get_smallest_planet()
       return @planets.find{ |planet| planet.diameter.min}
     end
+
+    def total_number_of_moons()
+      return @planets.reduce(0) { |running_total, planet| running_total + planet.number_of_moons}
+    end
     
     
 end
